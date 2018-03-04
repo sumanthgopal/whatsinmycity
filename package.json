@@ -2,9 +2,6 @@
   "name": "web-design-app",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {
-    "start": "node server.js"
-  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.0",
@@ -49,6 +46,5 @@
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
     "typescript": "~2.4.2"
-  },
-  "main": "server.js"
+  }
 }
