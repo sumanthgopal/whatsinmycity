@@ -3,12 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start": "node server.js"
   },
   "private": true,
   "dependencies": {
@@ -55,8 +50,5 @@
     "tslint": "~5.7.0",
     "typescript": "~2.4.2"
   },
-  "scripts": {
-  "start": "node server.js"
-  },
-	"main": "server.js"
+  "main": "server.js"
 }
