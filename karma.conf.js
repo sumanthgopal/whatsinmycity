@@ -21,7 +21,7 @@ module.exports = function (config) {
     },
     angularCli: {
       environment: 'dev'
-    },
+    }, 
     reporters: ['progress', 'kjhtml'],
 	host:'0.0.0.0',
     port: 3000,
