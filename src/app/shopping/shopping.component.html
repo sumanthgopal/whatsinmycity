@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>What's in my City? | Nagpur Restaurents</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+</head>
+
+<body class="main_body">
+
+<!--<nav class="navbar navbar-inverse" class="nav_bar">
+  <div class="container-fluid nvbar" style="height: 100px;background-color: #000000">
+    <div class="navbar-header">
+
+      <a class="navbar-brand" href="#"><img src="../assets/images/logo.png" class="main_logo" style="height:75px"/></a>
+      <button type="submit" class="btn btn-primary visible-sm visible-xs" (click) = "onClick()" id="login">Login</button>
+      <button type="submit" class="btn btn-warning visible-sm visible-xs" id="signup">Sign-up</button>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <form class="form-inline">
+
+          <div class="form-group button_grop">
+            <button type="submit" class="btn btn-primary visible-sm visible-xs" (click) = "onClick()" id="login">Login</button>
+            <button type="submit" class="btn btn-warning visible-sm visible-xs" id="signup">Sign-up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>-->
+
+
+<div class="container-fluid" style="background-color: #000000;height: 120px;">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color: #000000">
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+      <a [routerLink]="['/home']" class="navbar-brand"><img src="../../assets/images/notanymore.png" class="main_logo" style="height:100px"/></a>
+    </div>
+    <p class="textForResp">What's in My City?</p>
+  </div>
+  <button type="submit" class="btn btn-lg" (click) = "onClick()" id="logout" style="background-color: #00a86b;color: white">Logout</button>
+</div>
+
+<div id="section1" class="container-fluid" >
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="restHeading">
+    <h2 class = "main_heading">SHOPPING IN {{cityName}}</h2><br><br>
+  </div>
+
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class = "modal-content">
+      <div class="modal-body">
+        <div class="" id="moreInfo"><h3>More Information</h3></div>
+        <div id ="toBeHidden" class=" col-lg-6 col-md-6 col-sm-12 col-xs-12" >
+          <label >Rating:{{resData.Rating}}</label><br>
+          <span class="fa fa-star {{starName[0]}}"></span>
+          <span class="fa fa-star {{starName[1]}}"></span>
+          <span class="fa fa-star {{starName[2]}}"></span>
+          <span class="fa fa-star {{starName[3]}}"></span>
+          <span class="fa fa-star {{starName[4]}}"></span>
+          <h3>Map:</h3>
+          <iframe [src]="cleanURL(resData.Map)" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark btn-primary" (click)="c('Close click')">Close</button>
+      </div>
+    </div>
+  </ng-template>
+
+  <div  class="main_content">
+    <table class="table borderless" id="table1" *ngFor="let shop of shopping" >
+      <tbody >
+      <tr class="rw" >
+        <td >
+
+          <div class="" >
+            <div class="contact_info col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+              <img src={{shop.Image}} alt = "image1" class="media-object initial_image" style="width:470px;height:240px">
+              <h4 >{{shop.Cuisine}}</h4>
+              <h2 class="">{{shop.Name}}</h2>
+              <p >{{shop.Address}}</p>
+              <label >Contact Number:{{shop.Phonenumber}}</label><br>
+              <label >Opens at:{{shop.FromTime}}</label>&nbsp;
+              <label >Closes at:{{shop.ToTime}}</label>
+              <span style="cursor:pointer">
+                <div class="panel-body col-lg-12 col-md-12 col-sm-12 col-xs-12 " (click)="modalopen(content,shop)">
+                  <div id="moreInfoId" class="panel panel-default" >
+                    <div class="panel-heading"><b>More Information</b></div>
+                  </div>
+                </div>
+                </span>
+
+
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      </tbody>
+      <div id="borderAfter"></div>
+    </table>
+
+  </div>
+
+</div>
+
+
+<div id="footer" class="container-fluid" >
+
+
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 container-fluid customfooter">
+
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 foursections">
+
+      <div class="col-lg-offset-4 col-md-offset-4 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+
+        <!--<a href="">About Us</a> <br> <a href="">Contact Us</a><br> <a href="">Blogs</a><br><a href="">Disclaimer</a>
+        <br> <a class="headingrefForReview" href="#"> Write a Review</a>-->
+
+
+      </div>
+
+      <!--<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 cities">
+        <h3>Our Presence Across the World</h3>
+
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+
+
+        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Nicknamed as 'The Hub', home to numerous educational instiutions">
+          <p>Boston &nbsp; &nbsp; &nbsp; </p>
+        </a>
+        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Financial Capital of World">
+          <p>New York City &nbsp; &nbsp; &nbsp; </p>
+        </a>
+        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Home to Hollywood">
+          <p>Los Angeles &nbsp; &nbsp; &nbsp; </p>
+        </a>
+        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Famous for it's casinos & resorts">
+          <p>Las Vegas &nbsp; &nbsp; &nbsp; </p>
+        </a>
+
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+
+
+        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Tech hub of India">
+          <p>Bengaluru &nbsp; &nbsp; &nbsp; </p>
+        </a>
+        <a href="#" data-toggle="tooltip" data-placement="bottom" title="City with a rich heritage">
+          <p>Hyderabad &nbsp; &nbsp; &nbsp; </p>
+        </a>
+        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Financial Capital of India">
+          <p>Mumbai &nbsp; &nbsp; &nbsp; </p>
+        </a>
+        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Orange City of India">
+          <p>Nagpur</p>
+        </a>
+
+
+      </div>
+      </div>-->
+      <!--<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+        <div class="logos">
+          <a href="#"><img src="assets/images/facebook-logo-button.png" /></a> &nbsp; &nbsp;
+          <a href="#"><img src="assets/images/instagram-logo.png" /></a> &nbsp; &nbsp;
+          <a href="#"><img src="assets/images/twitter-logo-button.png" /></a>
+        </div>
+
+      </div>-->
+
+
+
+
+
+
+      <!---->
+    </div>
+
+    <div class="listofcities">
+
+
+
+      <br>
+      <p style="color:#ffffff;margin: auto"><i>What's in my city? &copy;</i> <a [routerLink]="['/about-us']" >
+        About Us |</a>
+        <a [routerLink]="['/contact-us']" >
+          Contact Us |</a>
+        <a [routerLink]="['/disclaimer']" >Disclaimer</a></p>
+
+    </div>
+  </div>
+
+
+</div>
+
+</body>
+
+</html>

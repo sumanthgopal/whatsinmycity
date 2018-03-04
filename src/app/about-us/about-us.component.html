@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>What's in my City | About Us</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+</head>
+<body>
+<nav class="navbar navbar-inverse"  style="height: 130px">
+  <div class="container-fluid">
+
+
+      <a [routerLink]="['/home']" class="navbar-brand"><img src="../../assets/images/notanymore.png" height="100" style="margin-right: 1413px"/></a>
+    </div>
+
+      <div class="" id="myNavbar">
+
+
+
+            <button type="submit" class="btn btn-primary " (click) = "onClick()" id="login" style="float: right">Logout</button>
+            <!--<button type="submit" class="btn btn-warning " id="signup">Sign-up</button>-->
+
+
+
+
+
+
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-8 col-xs-4">
+
+
+      <!--Carousel starts here-->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+            <img src="../../assets/images/aboutus.jpg" height="500" width="1200"/>
+
+            <div class="ourMission" style="margin-left: 150px">
+
+
+
+              <h2 style="font-family: 'Bookman Old Style'"><b>Helping people discover great places around them</b></h2>
+              <p style="font-family: Calibri">Founded in October of 2017 and based in Boston, What's in my City is a trusted website for people to explore and discover unique places around the world.</p>
+              <p style="font-family: Calibri">What's in my City is a technology company that uses location intelligence to build meaningful consumer experiences.</p>
+
+
+            </div>
+
+            <div class="ourLocations" >
+
+              <div class="row">
+
+                <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12" >
+
+
+                  <img src="../../assets/images/usamapfinal.jpg" height="600" width="680"/></div>
+
+                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+
+
+                  <img src="../../assets/images/indiaMapfinal.jpg" height="750" width="500"/></div>
+
+              </div>
+
+            </div>
+
+
+            <div class="ourTeam">
+
+              <h1 style="margin-left: 500px">Our Team</h1>
+
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="thumbnail">
+                      <a href="#"><img src="../../assets/images/sumanth.jpg" style="width:100%"/>
+                        </a>
+                       </div>
+                    <div class="caption">
+                      <p>Sumanth HG</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="thumbnail">
+                      <a href="#"><img src="../../assets/images/sravya.jpg" style="width:100%"/>
+                      </a>
+                       </div>
+                    <div class="caption">
+                      <p>Sravya Yella</p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <div class="thumbnail">
+                      <a href="#"><img src="../../assets/images/nidhi.jpg" style="width:100%"/>
+                      </a>
+                      </div>
+                    <div class="caption">
+                      <p>Nidhi Sarode</p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <div class="thumbnail">
+                      <a href="#"><img src="../../assets/images/rishi.jpg" style="width:100%"/>
+                      </a>
+                      </div>
+                    <div class="caption">
+                      <p>Rishi Nandedkar</p>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!--Footer starts here-->
+<div id="footer">
+
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container-fluid customfooter">
+
+
+
+    <div class="listofcities">
+      <br>
+      <p style="color:#ffffff;margin: auto"><i>What's in my city? &copy;</i> <a [routerLink]="['/about-us']" >
+        About Us |</a>
+        <a [routerLink]="['/contact-us']" >
+          Contact Us |</a>
+        <a [routerLink]="['/disclaimer']" >Disclaimer</a></p>
+
+    </div>
+  </div>
+
+
+</div>
+      <!--Footer ends here-->
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>What's in my City |Hyderabad</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+</head>
+<body>
+<nav class="navbar navbar-inverse"   style="height: 130px">
+  <div class="container-fluid">
+
+
+    <a [routerLink]="['/home']" class="navbar-brand"><img src="../../assets/images/notanymore.png" height="100" style="margin-right: 1413px"/></a>
+
+
+      <div class="" id="myNavbar">
+
+
+
+            <!--<button type="submit" class="btn btn-warning " id="myAccount">My Account</button>-->
+            <button type="submit" class="btn btn-primary " (click) = "onClick()" id="login" style="float: right">Logout</button>
+
+
+
+
+
+      </div>
+    </div>
+
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-8 col-xs-4">
+
+
+      <!--Carousel starts here-->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+
+            <img src="../../assets/images/hyderabad.jpg" height="500" width="1200"/>
+            <div class="ourMission" style="margin-left: 90px">
+
+              <h2><b>Hyderabad</b></h2>
+              <p> Hyderabad is the capital of the southern Indian state of Telangana and de jure capital of Andhra Pradesh.Occupying 650 square kilometres (250 sq mi) along the banks of the Musi River, it has a population of about 6.7 million and a metropolitan population of about 7.75 million, making it the fourth most populous city and sixth most populous urban agglomeration in India</p>
+              <p>Relics of Qutb Shahi and Nizam rule remain visible today; the Charminar—commissioned by Muhammad Quli Qutb Shah—has come to symbolise Hyderabad. Golconda fort is another major landmark. The influence of Mughlai culture is also evident in the region's distinctive cuisine, which includes Hyderabadi biryani and Hyderabadi haleem. The Qutb Shahis and Nizams established Hyderabad as a cultural hub, attracting men of letters from different parts of the world. Hyderabad emerged as the foremost centre of culture in India with the decline of the Mughal Empire in the mid-19th century, with artists migrating to the city from the rest of the Indian subcontinent. The Telugu film industry based in the city is the country's second-largest producer of motion pictures.</p>
+
+              <!--<h3>Explore curated lists of top restaurants, cafes, pubs, and bars in and around Bangalore, based on trends.</h3>-->
+
+
+
+              <h2 (click)="placeofint()"><b><a >Best Places to Visit in Hyderabad<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</span></a></b></h2>
+              <div class="row">
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/charminar.jpg" height="500" width="500"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>Charminar</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/golkonda.jpg" height="500" width="500"/></a>
+                  </div>
+                  <div class="caption">
+                    <p>Golkonda</p>
+                  </div>
+                </div>
+
+
+                <h2 (click)="shopping()" ><b><a >Best Places to Shop in Hyderabad<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</span></a></b></h2>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/neeru.jpg" height="500" width="500"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>Neeru's</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/elahe.jpg" height="530" width="500"/></a>
+                  </div>
+                  <div class="caption">
+                    <p>Elahe</p>
+                  </div>
+                </div>
+
+                <h2 (click)="ntlife()" ><b><a >Best Nightlife to enjoy in Hyderabad<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></a></b></h2>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/prost.jpg" height="500" width="500"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>Prost Brewpub</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/harry.jpg" height="530" width="500"/></a>
+                  </div>
+                  <div class="caption">
+                    <p>Harry's Pub</p>
+                  </div>
+                </div>
+
+
+                <h2 (click)="events()" ><b><a >Events</a></b></h2>
+
+                <div class="col-md-12">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/sufi.jpg" height="350" width="1000"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>Sufi Singers</p>
+                  </div>
+                </div>
+
+                <h2 (click)="rest()" ><b><a>Best restaurents to dine in Hyderabad<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></a></b></h2>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/bawarchi.jpg" height="500" width="500"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>Bawarchi Restaurant</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a><img src="../../assets/images/prego.jpg" height="530" width="500"/></a>
+                  </div>
+                  <div class="caption">
+                    <p>Prego</p>
+                  </div>
+                </div>
+
+
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Footer starts here-->
+<div class="container-fluid" style="background-color: black">
+  <div class="ftr col-lg-offset-4 col-md-offset-4 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+
+
+
+
+
+
+  </div>
+
+
+  <div class="listofcities">
+    <br>
+    <p style="color:#ffffff;margin: auto"><i>What's in my city? &copy;</i><a [routerLink]="['/about-us']" data-toggle="tooltip" data-placement="bottom">
+      About Us |</a>
+      <a [routerLink]="['/contact-us']" data-toggle="tooltip" data-placement="bottom" >
+        Contact Us |</a>
+
+      <a [routerLink]="['/disclaimer']" data-toggle="tooltip" data-placement="bottom">Disclaimer |</a></p>
+
+  </div>
+
+  <!--Footer ends here-->
+</div>
+<!--Footer ends here-->
+
+</body>
+</html>

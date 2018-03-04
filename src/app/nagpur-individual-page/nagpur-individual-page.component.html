@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>What's in my City |Nagpur</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+</head>
+<body>
+<nav class="navbar navbar-inverse" style="height: 130px">
+  <div class="container-fluid">
+
+
+      <a  [routerLink]="['/home']" class="navbar-brand" ><img src="../../assets/images/notanymore.png" height="100" style="margin-right: 1413px"/></a>
+
+    <div>
+      <div class="" id="myNavbar">
+
+
+
+            <!--<button type="submit" class="btn btn-warning " id="myAccount">My Account</button>-->
+            <button type="submit" class="btn btn-primary " (click) = "onClick()" id="login" style="float: right">Logout</button>
+
+
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-8 col-xs-4">
+
+
+      <!--Carousel starts here-->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+
+            <img src="../../assets/images/nagpur.jpg" height="500" width="1200"/>
+
+            <div class="ourMission" style="margin-left: 90px">
+
+              <h2><b>Nagpur</b></h2>
+              <p> Nagpur is the winter capital, a sprawling metropolis, and the third-largest city of the Indian state of Maharashtra after Mumbai and Pune. Nagpur is the 13th largest Indian city in terms of population. It has been proposed as one of the Smart Cities in Maharashtra.</p>
+              <p>Nagpur is the seat of the annual winter session of the Maharashtra state assembly. It is a major commercial and political centre of the Vidarbha region of Maharashtra. In addition, the city derives political importance from being the headquarters for the Hindu nationalist organisation RSS and an important location for the Dalit Buddhist movement. Nagpur is also known for Deekshabhoomi, the largest hollow stupa among all the Buddhist stupas in the world.</p>
+
+              <!--<h3>Explore curated lists of top restaurants, cafes, pubs, and bars in and around Bangalore, based on trends.</h3>-->
+
+
+
+              <h2 (click)="placeofint()"><b><a >Best Places to Visit in Nagpur</a></b></h2>
+              <div class="row">
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/ambazari.jpg" height="500" width="500"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>Ambazari Lake</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/rail.jpg" height="500" width="500"/></a>
+                  </div>
+                  <div class="caption">
+                    <p>Narrow Gauge Rail Museum</p>
+                  </div>
+                </div>
+
+
+                <h2 (click)="shopping()"><b><a >Best Places to Shop in Nagpur<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;</span></a></b></h2>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/aurelia.jpg" height="500" width="500"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>Aurelia</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/panache.jpg" height="530" width="500"/></a>
+                  </div>
+                  <div class="caption">
+                    <p>Panache</p>
+                  </div>
+                </div>
+
+                <h2 (click)="ntlife()"><b><a >Best Nightlife to enjoy in Nagpur<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></a></b></h2>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/ice.jpg" height="500" width="500"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>Ice Cube Pub & Restaurant</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/downing.jpg" height="530" width="500"/></a>
+                  </div>
+                  <div class="caption">
+                    <p>10 Downing Street</p>
+                  </div>
+                </div>
+
+
+                <h2 (click)="events()"><b><a >Events</a></b></h2>
+
+                <div class="col-md-12">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/SkyWaltzBalloonSafari.jpg" height="350" width="1000"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>Sky Waltz Balloon Safari - Season 5</p>
+                  </div>
+                </div>
+
+                <h2 (click)="rest()"><b><a >Best restaurents to dine in Nagpur<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></a></b></h2>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/sankalp.jpg" height="500" width="500"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>Sankalp</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/dalchini.jpg" height="530" width="500"/></a>
+                  </div>
+                  <div class="caption">
+                    <p>Dalchini</p>
+                  </div>
+                </div>
+
+
+              </div>
+
+
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Footer starts here-->
+<div class="container-fluid" style="background-color: black">
+  <div class="ftr col-lg-offset-4 col-md-offset-4 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+
+
+
+
+
+
+  </div>
+
+
+  <div class="listofcities">
+    <br>
+    <p style="color:#ffffff;margin: auto"><i>What's in my city? &copy;</i> <a [routerLink]="['/about-us']" data-toggle="tooltip" data-placement="bottom">
+      About Us |</a>
+      <a [routerLink]="['/contact-us']" data-toggle="tooltip" data-placement="bottom" >
+        Contact Us |</a>
+
+      <a [routerLink]="['/disclaimer']" data-toggle="tooltip" data-placement="bottom">Disclaimer |</a></p>
+
+  </div>
+
+  <!--Footer ends here-->
+</div>
+<!--Footer ends here-->
+
+</body>
+</html>

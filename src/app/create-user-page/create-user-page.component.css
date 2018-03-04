@@ -1,0 +1,40 @@
+#passwordError,#signupError,#emailError,#repPassError,#nameError{
+  color:#F00;
+}
+
+.ftr a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.signUpPage{
+  text-align: center;
+  font-size: 25px;
+}
+
+.button_grop{
+  float: right;
+}
+
+.container{
+  border:1px solid #000000;
+  margin-bottom: 20px;
+}
+
+.nav navbar-nav left ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+.nav navbar-nav left li {
+  float: left;
+}
+
+.nav navbar-nav left li a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}

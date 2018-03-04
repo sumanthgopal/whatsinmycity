@@ -1,0 +1,343 @@
+.container-fluid {
+  padding: 0 !important;
+  overflow-x: hidden;
+}
+
+.carousel-inner img {
+  width: 100%;
+  max-height: 550px;
+}
+
+.btn:hover,
+.btn:focus {
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #000;
+}
+
+h1 {
+  display: inline;
+}
+
+.headingref {
+  float: left;
+  font-size: 1em;
+  margin-top: 10px;
+  color: white;
+  display: inline;
+}
+
+.heading {
+  background-color: #0e0b16;
+  color: white;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.carousel-caption {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 165px;
+}
+
+li a {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.dropdown-toggle {
+  min-width: 250px;
+}
+
+.dropdown-menu {
+  width: 100%;
+}
+
+.btn {
+  float: right;
+  margin-right: 10px;
+  margin-top: 2px;
+  background-color: white;
+  color: black;
+}
+
+.logo {
+  margin-top: -380px;
+  margin-left: 100px;
+}
+
+.customfooter {
+  background-color: #0e0b16;
+  padding-top: 20px;
+  text-decoration: none;
+}
+
+.listofcities p {
+  display: inline-block;
+  color: black;
+  margin-top: 20px;
+}
+
+.logos {
+  float: right;
+}
+
+.foursections {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-item {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.mrsearchBox {
+  display: none;
+}
+
+.headingrefForMob {
+  display: none;
+}
+
+.headingrefForReview {
+  display: none;
+}
+
+.widthForSearch {
+  width: 200px;
+  opacity: 0.8;
+  height: 37px;
+}
+
+.widthForSearchBtn {
+  width: 40px;
+  height: 37px;
+}
+
+@media screen and (max-width: 1278px) {
+  .headingref {
+    display: none;
+  }
+  .headingrefForMob {
+    display: inline;
+  }
+  .logo {
+    display: none;
+  }
+  .headingrefForReview {
+    display: inline;
+    color: black;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #ulId {
+    display: none;
+  }
+  .mrsearchBox {
+    display: inline;
+    margin: 0 auto;
+    width: 100%;
+    opacity: 0.8;
+  }
+  .headingref {
+    display: none;
+  }
+  .headingrefForMob {
+    display: inline;
+  }
+  .headingrefForReview {
+    display: inline;
+    color: black;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #ulId {
+    display: none;
+  }
+  .mrsearchBox {
+    position: relative;
+    display: inline;
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    top: 35px;
+  }
+  .headingref {
+    display: none;
+  }
+  .headingrefForMob {
+    display: inline;
+    float: left;
+  }
+  .widthForSearch {
+    width: 150px;
+  //padding-top: 10px;
+  }
+  .headingrefForReview {
+    display: inline;
+    color: black;
+  }
+  .widthForSearchBtn {
+    position: relative;
+    top: 35px;
+  }
+}
+
+
+.foursections a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.foursections h4{
+  color: #fff;
+}
+
+.foursections h3{
+  color: #fff;
+}
+
+.modal {
+  /* This way it could be display flex or grid or whatever also. */
+  display: block;
+  /* Probably need media queries here */
+  width: 600px;
+  max-width: 100%;
+  height: 400px;
+  max-height: 100%;
+  position: fixed;
+  z-index: 9000;
+  left: 50%;
+  top: 50%;
+  /* Use this for centering if unknown width/height */
+  transform: translate(-50%, -50%);
+  /* If known, negative margins are probably better (less chance of blurry text). */
+  /* margin: -200px 0 0 -200px; */
+  background: white;
+  box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  position: absolute;
+  top: 10%;
+}
+
+.categorySearch{
+  color: #ffffff;
+  font-family: "Josefin Sans";
+  font-weight: 100;
+}
+
+#searchInput{
+  border:none !important;
+  opacity: 0.5;
+}
+
+#cities{
+  border:none !important;
+  opacity: 0.5;
+}
+
+.form-inline{
+  margin-left: 100px;
+}
+
+.nav{
+  margin-left: 125px;
+}
+
+.magnifyingGlass{
+  cursor:pointer;
+}
+
+.circle{
+  border-radius:50%;
+}
+
+#footerID{
+  background-color: #000000;
+}
+
+#footerID a{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#footerID h1{
+  color: #ffffff;
+}
+
+.whiteBorder{
+  border-bottom:2px dotted #ffffff !important;
+}
+
+
+/*for dropdownn*/
+.dropbtn1 {
+  background-color: #0E0B16;
+  color: #ffffff;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 189px;
+  margin-bottom: 10px;
+  float: left;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #cccccc;
+  min-width: 160px;
+  z-index: 1;
+  margin-top: 44px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ffffff}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn1 {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.headingref1 {
+  float: right;
+  font-size: 1em;
+  color: white;
+  display: inline;
+}
+
+#optionValue{
+  background-color: rgba(0, 0, 255,0.3) !important;
+}
+
+#liId6,#liId1,#liId2,#liId3,#liId4,#liId5{
+  cursor: pointer;
+}
+
+#category, #category1,#category2,#category3,#category4,#category5{
+  background-color: rgba(0, 0, 255,0.3) !important;
+  font-family: "Times New Roman";
+}

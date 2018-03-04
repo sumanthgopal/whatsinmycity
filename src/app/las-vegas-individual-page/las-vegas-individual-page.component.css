@@ -1,0 +1,7 @@
+h2{
+  cursor: pointer;
+}
+.listofcities a {
+  text-decoration: none;
+  color: #ffffff;
+}

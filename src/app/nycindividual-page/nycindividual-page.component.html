@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>What's in my City |New York</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+</head>
+<body>
+<nav class="navbar navbar-inverse"  style="height: 130px">
+  <div class="container-fluid">
+
+
+      <a [routerLink]="['/home']" class="navbar-brand"><img src="../../assets/images/notanymore.png" height="100" style="margin-right: 1413px"/></a>
+
+
+      <div class="" id="myNavbar">
+
+
+
+            <!--<button type="submit" class="btn btn-warning " id="myAccount">My Account</button>-->
+            <button type="submit" class="btn btn-primary " (click) = "onClick()" id="login"  style="float: right">Logout</button>
+
+
+
+
+
+      </div>
+
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-8 col-xs-4">
+
+
+      <!--Carousel starts here-->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+
+            <img src="../../assets/images/newyork.jpg" height="500" width="1200"/>
+
+            <div class="ourMission" style="margin-left: 90px">
+
+              <h2><b>New York City</b></h2>
+              <p>The City of New York, often called New York City or simply New York, is the most populous city in the United States. With an estimated 2016 population of 8,537,673 distributed over a land area of about 302.6 square miles (784 km2), New York City is also the most densely populated major city in the United States. Located at the southern tip of the state of New York, the city is the center of the New York metropolitan area, one of the most populous urban agglomerations in the world with an estimated 23.7 million residents as of 2016. A global power city, New York City has been described as the cultural, financial, and media capital of the world, and exerts a significant impact upon commerce, entertainment, research, technology, education, politics, and sports.</p>
+              <p>Situated on one of the world's largest natural harbors, New York City consists of five boroughs, each of which is a separate county of New York State. The five boroughs – Brooklyn, Queens, Manhattan, The Bronx, and Staten Island – were consolidated into a single city in 1898. The city and its metropolitan area constitute the premier gateway for legal immigration to the United States, and as many as 800 languages are spoken in New York, making it the most linguistically diverse city in the world. New York City is home to more than 3.2 million residents born outside the United States, the largest foreign-born population of any city in the world. In 2013, the tri-state New York Metropolitan Statistical Area (MSA) produced a gross metropolitan product (GMP) of nearly US$1.4 trillion. If New York City were a country, it would have the 12th highest GDP in the world.</p>
+
+              <!--<h3>Explore curated lists of top restaurants, cafes, pubs, and bars in and around Bangalore, based on trends.</h3>-->
+
+
+
+              <h2 (click)="placeofint()"><b><a >Best Places to Visit in New York City</a></b></h2>
+              <div class="row">
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a><img src="../../assets/images/USA-NYC-Brooklyn_Bridge.jpg" height="500" width="500"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>Brooklyn Bridge</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a><img src="../../assets/images/download.jpg" height="500" width="500"/></a>
+                  </div>
+                  <div class="caption">
+                    <p>Rockefeller Center</p>
+                  </div>
+                </div>
+
+
+                <h2 (click)="shopping()"><b><a >Best Places to Shop in New York City<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</span></a></b></h2>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a><img src="../../assets/images/hm.jpg" height="500" width="500"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>H&M</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a><img src="../../assets/images/burberry.jpg" height="530" width="500"/></a>
+                  </div>
+                  <div class="caption">
+                    <p>Burberry</p>
+                  </div>
+                </div>
+
+                <h2 (click)="ntlife()"><b><a >Best Nightlife to enjoy in New York City<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></a></b></h2>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a><img src="../../assets/images/mcgee's.jpg" height="500" width="500"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>McGee's</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a><img src="../../assets/images/irish.jpg" height="530" width="500"/></a>
+                  </div>
+                  <div class="caption">
+                    <p>The Irish Pub</p>
+                  </div>
+                </div>
+
+
+                <h2 (click)="events()"><b><a >Events</a></b></h2>
+
+                <div class="col-md-12">
+                  <div class="thumbnail">
+                    <a><img src="../../assets/images/tsd.jpg" height="350" width="1000"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>Tantra Speed Date</p>
+                  </div>
+                </div>
+
+                <h2 (click)="rest()"><b><a>Best restaurents to dine in New York City<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></a></b></h2>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a><img src="../../assets/images/perse.jpg" height="500" width="500"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>Per Se</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a><img src="../../assets/images/marea.jpg" height="530" width="500"/></a>
+                  </div>
+                  <div class="caption">
+                    <p>Marea</p>
+                  </div>
+                </div>
+
+
+              </div>
+
+
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Footer starts here-->
+<div class="container-fluid" style="background-color: black">
+  <div class="ftr col-lg-offset-4 col-md-offset-4 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+
+
+
+
+
+
+  </div>
+
+
+  <div class="listofcities">
+    <br>
+    <p style="color:#ffffff;margin: auto"><i>What's in my city? &copy;</i><a [routerLink]="['/about-us']" data-toggle="tooltip" data-placement="bottom">
+      About Us |</a>
+      <a [routerLink]="['/contact-us']" data-toggle="tooltip" data-placement="bottom" >
+        Contact Us |</a>
+
+      <a [routerLink]="['/disclaimer']" data-toggle="tooltip" data-placement="bottom">Disclaimer |</a></p>
+
+  </div>
+
+  <!--Footer ends here-->
+</div>
+<!--Footer ends here-->
+
+</body>
+</html>

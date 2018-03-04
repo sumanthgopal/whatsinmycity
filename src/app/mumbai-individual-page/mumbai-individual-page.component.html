@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>What's in my City |Mumbai</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+</head>
+<body>
+<nav class="navbar navbar-inverse"  style="height: 130px">
+  <div class="container-fluid">
+
+
+      <a [routerLink]="['/home']" class="navbar-brand"><img src="../../assets/images/notanymore.png" height="100" style="margin-right: 1413px"/></a>
+
+
+      <div class="" id="myNavbar">
+
+
+
+            <!--<button type="submit" class="btn btn-warning " id="myAccount">My Account</button>-->
+            <button type="submit" class="btn btn-primary " (click) = "onClick()" id="login" style="float: right">Logout</button>
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-8 col-xs-4">
+
+
+      <!--Carousel starts here-->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+
+            <img src="../../assets/images/mumbai.jpg" height="500" width="1200"/>
+
+            <div class="ourMission" style="margin-left: 90px">
+
+              <h2><b>Mumbai</b></h2>
+              <p> Mumbai is the capital city of the Indian state of Maharashtra. It is the most populous city in India with an estimated city proper population of 12.4 million as of 2011. Along with the neighbouring regions of the Mumbai Metropolitan Region, it is second most populous metropolitan area in India, with a population of 21.3 million as of 2016. Mumbai lies on the Konkan on the west coast of India and has a deep natural harbour.</p>
+              <p>The seven islands that came to constitute Mumbai were home to communities of fishing colonies of the Koli people. For centuries, the islands were under the control of successive indigenous empires before being ceded to the Portuguese Empire and subsequently to the East India Company when in 1661 Charles II of England married Catherine of Braganza and as part of her dowry Charles received the ports of Tangier and Seven Islands of Bombay. During the mid-18th century, Bombay was reshaped by the Hornby Vellard project, which undertook reclamation of the area between the seven islands from the sea. Along with construction of major roads and railways, the reclamation project, completed in 1845, transformed Bombay into a major seaport on the Arabian Sea. Bombay in the 19th century was characterised by economic and educational development. During the early 20th century it became a strong base for the Indian independence movement.</p>
+
+              <!--<h3>Explore curated lists of top restaurants, cafes, pubs, and bars in and around Bangalore, based on trends.</h3>-->
+
+
+
+              <h2 (click)="placeofint()"><b><a >Best Places to Visit in Mumbai</a></b></h2>
+              <div class="row">
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/gatewayofindia.jpg" height="500" width="500"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>Gateway of India</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/kanheri.JPG" height="500" width="500"/></a>
+                  </div>
+                  <div class="caption">
+                    <p>Kanheri Caves</p>
+                  </div>
+                </div>
+
+
+                <h2 (click)="shopping()"><b><a>Best Places to Shop in Mumbai<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></a></b></h2>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/seasons.jpg" height="500" width="500"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>Seasons</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/magic.jpg" height="530" width="500"/></a>
+                  </div>
+                  <div class="caption">
+                    <p>Magic Mirror</p>
+                  </div>
+                </div>
+
+                <h2 (click)="ntlife()"><b><a >Best Nightlife to enjoy in Mumbai<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></a></b></h2>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a><img src="../../assets/images/waters.jpg" height="500" width="500"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>Waters</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a ><img src="../../assets/images/irish.jpg" height="530" width="500"/></a>
+                  </div>
+                  <div class="caption">
+                    <p>The Irish House</p>
+                  </div>
+                </div>
+
+
+                <h2 (click)="events()"><b><a >Events</a></b></h2>
+
+                <div class="col-md-12">
+                  <div class="thumbnail">
+                    <a><img src="../../assets/images/Espérance 2.1.jpg" height="350" width="1000"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>Espérance 2.1</p>
+                  </div>
+                </div>
+
+                <h2 (click)="rest()"><b><a>Best restaurents to dine in Mumbai<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></a></b></h2>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a><img src="../../assets/images/peshwari.jpg" height="500" width="500"/> </a>
+                  </div>
+                  <div class="caption">
+                    <p>Peshawri</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="thumbnail">
+                    <a><img src="../../assets/images/mirchiandmime.jpg" height="530" width="500"/></a>
+                  </div>
+                  <div class="caption">
+                    <p>Mirchi and Mime</p>
+                  </div>
+                </div>
+
+
+              </div>
+
+
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Footer starts here-->
+<div class="container-fluid" style="background-color: black">
+  <div class="ftr col-lg-offset-4 col-md-offset-4 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+
+
+
+
+
+  </div>
+
+
+  <div class="listofcities">
+    <br>
+    <p style="color:#ffffff;margin: auto"><i>What's in my city? &copy;</i><a [routerLink]="['/about-us']" data-toggle="tooltip" data-placement="bottom">
+      About Us |</a>
+      <a [routerLink]="['/contact-us']" data-toggle="tooltip" data-placement="bottom" >
+        Contact Us |</a>
+
+      <a [routerLink]="['/disclaimer']" data-toggle="tooltip" data-placement="bottom">Disclaimer |</a></p>
+
+  </div>
+
+  <!--Footer ends here-->
+</div>
+<!--Footer ends here-->
+
+</body>
+</html>

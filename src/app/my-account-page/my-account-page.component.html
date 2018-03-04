@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>What's in my City</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  <!-- Latest compiled and minified Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <!-- jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+  <!-- Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+  <!-- Latest compiled and minified Bootstrap JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+
+  <script>
+    $(document).ready(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+</head>
+<body>
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class = "modal-content">
+    <div class="modal-body">
+      <h3>Please Login to Continue</h3>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+    </div>
+  </div>
+</ng-template>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-8 col-xs-4">
+      <div *ngIf="! isUserLoggedIn" class="heading">
+        <h1> &nbsp; </h1>
+        <a class="headingref" href="#">Write a Review</a>
+        <a class="headingrefForMob">What's in my City?</a>
+
+        <!--<img class="logo" src="../../assets/images/logo.png" alt="Logo" width="200px">-->
+
+        <div class="dropdown">
+          <a [routerLink]=""><span class="dropbtn1 headingref1" style="margin-left: 780px">My Account</span></a>
+
+          <div class="dropdown-content">
+            <a href="#">Change my password</a>
+            <a href="#">Settings</a>
+            <a href="#">Link 3</a>
+          </div>
+
+        </div>
+        <a [routerLink]="['/loginuser']"><button type="button" class="btn" style="align:right">Login</button></a>
+        <a [routerLink]="['/createuser']"><button type="button" class="btn">Sign Up</button></a>
+      </div>
+      <div *ngIf="isUserLoggedIn" class="heading">
+        <h1> &nbsp; </h1>
+        <a class="headingref" href="#">Write a Review</a>
+        <a class="headingrefForMob">What's in my City?</a>
+        <a (click)="logoutClicked($event)"><button type="button" class="btn" style="align:right">Logout</button></a>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+          <form class="form-horizontal" action="/action_page.php">
+
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email">Name:</label>
+              <div class="col-sm-6">
+                <input type="email" class="form-control" id="name" placeholder="Enter name">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email">Email:</label>
+              <div class="col-sm-6">
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="pwd">Change Password:</label>
+              <div class="col-sm-6">
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Submit</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+      <div id="footerID" class="container-fluid" >
+
+
+
+
+
+
+        <!--<div class="row" style="margin-top: 30px">
+
+          <h1 style="margin-top: 10px;margin-left: 470px;margin-bottom: 30px">Our Presence spans across India and USA</h1>
+
+          <div class="clearfix"></div>
+
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <a href="#"><img src="../../assets/images/bangvector.png" class="circle" alt="bengaluru" width="304" height="236"></a>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <a href="#"><img src="../../assets/images/hyderabad-india-charminar-vector-drawn-sketch-illustration-hand-64018001.jpg" class="circle" alt="hyderabad" width="304" height="236"></a>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <a href="#"><img src="../../assets/images/mumbaibw.png" class="circle" alt="mumbai" width="304" height="236"></a>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <a href="#"><img src="../../assets/images/nagpur.jpg" class="circle" alt="nagpur" width="304" height="236"></a>
+          </div>
+
+          <div class="whiteBorder"></div>
+
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <a href="#"><img src="../../assets/images/boston_cityscape_wall_decal_design_by_wall_decal_shop-d6808v0.jpg" class="circle" alt="boston" width="304" height="236"></a>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <a href="#"><img src="../../assets/images/stock-vector-los-angeles-lettering-modern-text-and-skyline-city-vector-los-angeles-print-hand-drawn-font-for-604803965-2.jpg" class="circle" alt="losangeles" width="304" height="236"></a>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <a href="#"><img src="../../assets/images/laslaslas.jpg" class="circle" alt="lasvegas" width="304" height="236"></a>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <a href="#"><img src="../../assets/images/new-york-skyline-and-red-ribbon_23-2147493929_Fotor.jpg" class="circle" alt="nyc" width="304" height="236"></a>
+          </div>
+
+
+
+
+
+        </div>-->
+
+
+
+
+        <div class="listofcities">
+
+
+
+          <br>
+          <p style="color:#ffffff;"><i>What's in my city? &copy;</i><a href="">About Us | </a><a href="">Contact Us | </a><a href="">Disclaimer | </a>
+            <a class="headingrefForReview" href="#"> Write a Review</a></p>
+
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+body {
+  position: relative;
+}
+
+.affix {
+  top: 0;
+  width: 100%;
+  z-index: 9999 !important;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.affix ~ .container-fluid {
+  position: relative;
+  top: 50px;
+}
+
+.panel-heading:hover {
+  background-color: #dfdfdf !important;
+}
+
+.blackBorder {
+  border: 1px solid #000;
+  margin-top:20px;
+}
+
+#section1 {
+  padding-top: 50px;
+  color: #fff;
+  background-color: white;
+}
+
+#table1 {
+  display:inline;
+  margin:4px 4px 4px 4px;
+  /*border:4px solid #333;*/
+  float: left;
+  min-height: 40px;
+  width: 48%;
+}
+
+.main_content{
+  margin-left:120px;
+  margin-right: 120px;
+  font-family: Cabin;
+  color: black;
+
+}
+
+.main_heading{
+  color: #ffffff;
+  align-items: center;
+  text-align: center;
+  font-family: Cabin;
+  color: black;
+}
+
+#footer{
+  background-color: #4d4d4d;
+}
+
+.foursections a{
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .initial_image {
+    width: 175px;
+    float: left;
+    margin-left: -200px;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+ .panel{
+   width:350px;
+   margin-left:-130px;
+ }
+}
+
+@media only screen and (max-width: 1024px) {
+ .description{
+   margin-left:-50px;
+ }
+  .blackBorder{
+   margin-left:-150px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .main_heading{
+    margin:auto;
+  }
+
+  .table tbody tr td{
+    border:none;
+  }
+
+  .button_grop{
+    margin-right: 500px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  tr{
+    margin-top:70px;
+  }
+
+}
+
+.borderless td, .borderless th {
+  border: none;
+}
+
+.blackBorder{
+  margin-top:50px;
+  border:2px solid #000000;
+}
+
+.panel .panel-warning .panel-body{
+  background-color: #000;
+}
+
+@media only screen and (max-width: 1024px){
+  .altBtns{
+    visiblity:visible;
+  }
+}
+
+.altBtns{
+  display: none;
+}
+
+.modal {
+  /* This way it could be display flex or grid or whatever also. */
+  display: block;
+  /* Probably need media queries here */
+  width: 600px;
+  max-width: 100%;
+  height: 400px;
+  max-height: 100%;
+  position: fixed;
+  z-index: 9000;
+  left: 50%;
+  top: 50%;
+  /* Use this for centering if unknown width/height */
+  transform: translate(-50%, -50%);
+  /* If known, negative margins are probably better (less chance of blurry text). */
+  /* margin: -200px 0 0 -200px; */
+  background: #ccccff;
+  box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  background: #b4dbc0;
+  position: absolute;
+  top: 10%;
+}
+
+.foursections a {
+  color: #fff;
+}
+
+.foursections h4{
+  color: #fff;
+}
+
+.foursections h3{
+  color: #fff;
+}
+
+.textForResp{
+  display: none;
+}
+
+
+@media only screen and (max-width: 1024px){
+  .main_body{
+    width:435px;
+  }
+
+  .panel-body{
+    display: none;
+  }
+
+  .contact_info{
+    margin-left: -58px;
+  }
+
+  .main_logo{
+    width:405px;
+  }
+  .nav_bar{
+    height:200px;
+  }
+  .nvbar{
+    height:200px;
+  }
+.nvbar{
+  height:160px;
+}
+
+.navbar-brand{
+  display: none;
+}
+
+.textForResp{
+  display: inline-block;
+  color: white;
+  align-items: center;
+}
+
+}
+
+.checked {
+  color: #cc0000;
+}
+
+.wrapper input {
+  border: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  opacity: 0;
+}
+
+.wrapper label {
+  position: relative;
+  float: right;
+  color: #C8C8C8;
+}
+
+.wrapper label:before {
+  margin: 5px;
+  content: "\f005";
+  font-family: FontAwesome;
+  display: inline-block;
+  font-size: 1.5em;
+  color: #ccc;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.wrapper input:checked ~ label:before {
+  color: #FFC107;
+}
+
+#moreInfo{
+  text-align: center;
+}
+
+#borderAfter{
+  border: 1px solid #000000;
+  width: 93%;
+}
+
+.panel-body{
+  margin-left: -19px;
+  width:160%;
+}
+
+.panel-heading{
+  background-color: #008f95 !important;
+}
+
+#logout{
+  float: right;
+}
+
+.main_logo{
+  margin-left: 100px;
+}
+
+#restHeading{
+/*background-image: url('/assets/images/food.jpg');
+  background-size: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;*/
+}
+
+.listofcities a{
+  text-decoration: none;
+  color:#ffffff;
+}
+
+/*for dropdownn*/
+.dropbtn1 {
+  background-color: #0E0B16;
+  color: #ffffff;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 189px;
+  margin-bottom: 10px;
+  float: left;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #cccccc;
+  min-width: 160px;
+  z-index: 1;
+  margin-top: 44px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ffffff}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn1 {
+  background-color: #ffffff;
+  color: #000000;
+}
+

@@ -1,0 +1,7 @@
+#emailError{
+  color:#F00;
+}
+
+#passwordError,#loginError{
+  color:#F00;
+}

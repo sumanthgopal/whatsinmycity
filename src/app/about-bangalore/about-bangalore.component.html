@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>What's in my City |Bangalore</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+</head>
+<body>
+<nav id="logoIm" class="navbar navbar-inverse"  style="height: 130px">
+  <div class="container-fluid">
+
+      <a [routerLink]="['/home']" class="navbar-brand"><img src="../../assets/images/notanymore.png" height="100" style="margin-right: 1413px"/></a>
+
+
+      <div class="" id="myNavbar">
+
+             <button type="submit" class="btn btn-primary " (click) = "onClick()" id="login" style="float: right">Logout</button>
+       </div>
+
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-8 col-xs-4">
+
+
+      <!--Carousel starts here-->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+
+            <img src="../../assets/images/Vidhana_Souda_,_Bangalore.jpg" height="500" width="1200"/>
+
+            <div class="ourMission" style="margin-left: 90px">
+
+              <h2><b>Bangalore</b></h2>
+              <p> Bangalore officially known as Bengaluru is the capital of the Indian state of Karnataka. It has a population of about 8.42 million, making it the third most populous city and fifth most populous urban agglomeration in India. It is located in southern India on the Deccan Plateau. Its elevation is over 900 m (3,000 ft) above sea level, the highest of India's major cities.</p>
+              <p>Bangalore is sometimes referred to as the "Silicon Valley of India" (or "IT capital of India") because of its role as the nation's leading information technology (IT) exporter. Indian technological organisations ISRO, Infosys, Wipro and HAL are headquartered in the city. A demographically diverse city, Bangalore is the second fastest-growing major metropolis in India. It is home to many educational and research institutions in India, such as Indian Institute of Science (IISc), Indian Institute of Management (Bangalore) (IIMB), National Institute of Fashion Technology, Bangalore, National Institute of Design, Bangalore (NID R&D Campus), National Law School of India University (NLSIU) and National Institute of Mental Health and Neurosciences (NIMHANS). Numerous state-owned aerospace and defence organisations, such as Bharat Electronics, Hindustan Aeronautics and National Aerospace Laboratories are located in the city. The city also houses the Kannada film industry.</p>
+
+              <!--<h3>Explore curated lists of top restaurants, cafes, pubs, and bars in and around Bangalore, based on trends.</h3>-->
+
+
+
+
+
+                <h2 (click)="placeofint()" ><b><a>Best Places to Visit in Bangalore</a></b></h2>
+                  <div class="row">
+
+                    <div class="col-md-6">
+                      <div class="thumbnail">
+                        <a ><img src="../../assets/images/Bangalore_Palace.jpg" height="500" width="500"/> </a>
+                        </div>
+                      <div class="caption">
+                        <p>Bangalore Palace</p>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="thumbnail">
+                        <a ><img src="../../assets/images/lalbagh.jpg" height="500" width="500"/></a>
+                       </div>
+                      <div class="caption">
+                        <p>Lalbagh</p>
+                      </div>
+                    </div>
+
+
+                  <h2 (click)="shopping()" style="text-align: center"><b><a>Best Places to Shop in Bangalore<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</span></a></b></h2>
+
+                    <div class="col-md-6">
+                      <div class="thumbnail">
+                        <a><img src="../../assets/images/ubcity1.jpg" height="500" width="500"/> </a>
+                      </div>
+                      <div class="caption">
+                        <p>UB City</p>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="thumbnail">
+                        <a><img src="../../assets/images/Commercial_Street1.jpg" height="500" width="500"/></a>
+                      </div>
+                      <div class="caption">
+                        <p>Commercial Street</p>
+                      </div>
+                    </div>
+
+                    <h2 (click)="ntlife()" style="text-align: center"><b><a >Best Nightlife to enjoy in Bangalore<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></a></b></h2>
+
+                    <div class="col-md-6">
+                      <div class="thumbnail">
+                        <a ><img src="../../assets/images/churchstreetsocial.jpg" height="500" width="500"/> </a>
+                      </div>
+                      <div class="caption">
+                        <p>Church Street Social</p>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="thumbnail">
+                        <a ><img src="../../assets/images/The-Biere-Club-Bangalore.jpg" height="500" width="500"/></a>
+                      </div>
+                      <div class="caption">
+                        <p>The Biere Club</p>
+                      </div>
+                    </div>
+
+
+                    <h2 (click)="events()" style="text-align: center"><b><a >Events</a></b></h2>
+
+                    <div class="col-md-12">
+                      <div class="thumbnail">
+                        <a ><img src="../../assets/images/bangalore_standup_comedy.jpg" height="350" width="1000"/> </a>
+                      </div>
+                      <div class="caption">
+                        <p>Standup Comedy</p>
+                      </div>
+                    </div>
+
+                    <h2 (click)="rest()"class="heading"><b><a >Best restaurents to dine in Bangalore<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></a></b></h2><br>
+
+                    <div class="col-md-6">
+                      <div class="thumbnail">
+                        <a ><img src="../../assets/images/karavalli.jpg" height="500" width="500"/> </a>
+                      </div>
+                      <div class="caption">
+                        <p>Karavalli</p>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="thumbnail">
+                        <a ><img src="../../assets/images/shiro.jpg" height="500" width="500"/></a>
+                      </div>
+                      <div class="caption">
+                        <p>Shiro</p>
+                      </div>
+                    </div>
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!--Footer starts here-->
+        <div class="container-fluid" style="background-color: black">
+          <div class="ftr col-lg-offset-4 col-md-offset-4 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+
+
+
+
+
+          </div>
+
+
+          <div class="listofcities">
+            <br>
+            <p style="color:#ffffff;margin: auto"><i>What's in my city? &copy;</i> <a [routerLink]="['/about-us']" data-toggle="tooltip" data-placement="bottom">
+              About Us |</a>
+              <a [routerLink]="['/contact-us']" data-toggle="tooltip" data-placement="bottom" >
+                Contact Us |</a>
+
+              <a [routerLink]="['/disclaimer']" data-toggle="tooltip" data-placement="bottom">Disclaimer |</a></p>
+
+          </div>
+
+          <!--Footer ends here-->
+        </div>
+      <!--Footer ends here-->
+
+</body>
+</html>
