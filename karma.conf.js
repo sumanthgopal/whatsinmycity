@@ -24,7 +24,7 @@ module.exports = function (config) {
     }, 
     reporters: ['progress', 'kjhtml'],
 	host:'0.0.0.0',
-    port: 3000,
+    port: process.env.PORT || 5000,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
@@ -32,3 +32,19 @@ module.exports = function (config) {
     singleRun: false
   });
 };
+
+var express = require('express')
+var app = express()
+
+app.set('port', (process.env.PORT || 5000))
+app.use(express.static(__dirname + '/public'))
+
+app.get('/', function(request, response) {
+  response.render('src/index');
+})
+
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'))
+})
+
+

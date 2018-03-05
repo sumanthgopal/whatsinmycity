@@ -3,12 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js",
-	"start-ng": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start": "node index.js"
   },
   "private": true,
   "dependencies": {
@@ -54,6 +49,9 @@
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
     "typescript": "~2.4.2"
+  },
+  "engines": {
+    "node": "4.0.0"
   },
   "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.3.",
   "main": "karma.conf.js",
