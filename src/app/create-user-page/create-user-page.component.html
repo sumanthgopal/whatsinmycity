@@ -22,7 +22,7 @@
 
 
   <button type="submit" class="btn btn-warning " id="myAccount" style="float: right">My Account</button>
-  <button type="submit" class="btn btn-primary " (click) = "onClick()" id="login" style="float: right">Logout</button>
+  <button type="submit" class="btn btn-primary " id="login" style="float: right">Logout</button>
   <!--<button type="submit" class="btn btn-lg" (click) = "onClick()" id="logout" style="background-color: #00a86b;color: white" style="float: right">Logout</button>-->
 </div>
 
@@ -62,7 +62,7 @@
     <div class="form-group">
       <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Your name:</label>
       <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-        <input class="form-control" id="name" type="text" [(ngModel)]="model.username" name="username" (blur) = "nameValidate()" placeholder="Enter your name here" required><span id="nameError"></span>
+        <input class="form-control" id="name" type="text" [(ngModel)]="model.name" name="username" (blur) = "nameValidate()" placeholder="Enter your name here" required><span id="nameError"></span>
       </div>
     </div>
 
