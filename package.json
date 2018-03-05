@@ -51,7 +51,7 @@
     "typescript": "~2.4.2"
   },
   "engines": {
-    "node": "4.0.0"
+    "node": "4.7.0"
   },
   "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.3.",
   "main": "karma.conf.js",
