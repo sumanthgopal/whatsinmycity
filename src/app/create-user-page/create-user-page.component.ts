@@ -70,7 +70,7 @@ export class CreateUserPageComponent implements OnInit, AfterViewInit {
             var retVal = confirm("Are you sure you want to create an account with us?");
                if( retVal == true ){
                  this.model.code = this.makeid();
-                 console.log(this.model);
+                 
                   this.userService
                 .onSignup(this.model)
                 .subscribe(() => this.goBack());

@@ -33,7 +33,7 @@ export class WriteAreviewComponent implements OnInit, AfterViewInit {
     this.userservice
       .getSelectedUsers(this.emailUser)
       .subscribe(user => {
-        console.log(this.selectedUser = user);
+        
       });
   }
   ngAfterViewInit() {
@@ -48,7 +48,7 @@ export class WriteAreviewComponent implements OnInit, AfterViewInit {
       $('#signupError').html('Please enter Review');
       return false;
     }else{
-      var retVal = confirm("Do you want to proceed with login?");
+      var retVal = confirm("Do you want to submit the review?");
       if( retVal == true ){
         this.userservice
           .updateReview($('#reviewArea').val(),$('#btn').val());

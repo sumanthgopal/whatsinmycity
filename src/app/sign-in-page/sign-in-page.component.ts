@@ -44,7 +44,7 @@ export class SignInPageComponent implements OnInit, AfterViewInit {
         if( retVal == true ){
           this.userservice
             .loggedIn(true);
-          console.log(this.loggedUser);
+          
           let navigationExtras: NavigationExtras = {
             queryParams: {
               "user": this.loggedUser.email

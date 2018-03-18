@@ -44,7 +44,7 @@ export class EventsComponent implements OnInit {
 
   modalopen(content,r:Events){
     this.resData=r;
-    console.log(this.resData);
+    
     this.starName = ['','','','',''];
     var myInt3 = parseInt(r.Rating);
     for(var i=0;i<myInt3;i++){

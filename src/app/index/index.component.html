@@ -29,7 +29,7 @@
       <h3>Please Login to Continue</h3>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+      <button style="cursor:pointer" type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
     </div>
   </div>
 </ng-template>
@@ -38,7 +38,7 @@
     <div class="">
       <div *ngIf="! isUserLoggedIn" class="heading">
         <h1> &nbsp; </h1>
-        <a class="headingref"(click)="writerev(content)"style="margin-left: 15px">Write a Review</a>
+        <a class="headingref" (click)="writerev(content)" style="margin-left: 15px;cursor:pointer;">Write a Review</a>
         <a class="headingrefForMob">What's in my City?</a>
 
         <!--<img class="logo" src="../../assets/images/logo.png" alt="Logo" width="200px">-->
@@ -52,14 +52,14 @@
 
         </span>
         </div>-->
-        <a [routerLink]="['/loginuser']"><button type="button" class="btn" style="align:right">Login</button></a>
-        <a [routerLink]="['/createuser']"><button type="button" class="btn">Sign Up</button></a>
+        <a [routerLink]="['/loginuser']"><button type="button" class="btn" style="align:right;cursor:pointer">Login</button></a>
+        <a [routerLink]="['/createuser']"><button type="button" class="btn" style="cursor:pointer">Sign Up</button></a>
       </div>
         <div *ngIf="isUserLoggedIn" class="heading">
           <h1> &nbsp; </h1>
-          <a class="headingref"(click)="writerev(content)">Write a Review</a>
+          <a style="cursor:pointer;" class="headingref" (click)="writerev(content)">Write a Review</a>
           <a class="headingrefForMob">What's in my City?</a>
-          <a (click)="logoutClicked($event)"><button type="button" class="btn" style="align:right">Logout</button></a>
+          <a (click)="logoutClicked($event)"><button type="button" class="btn" style="align:right;cursor:pointer">Logout</button></a>
         </div>
 
       <!--Carousel starts here-->
@@ -221,37 +221,37 @@
           </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a ><img src="../../assets/images/bangvector.png" class="circle" alt="bengaluru" width="304" height="236" (click)="bagBtn(content)"></a>
+                <a style="cursor:pointer;" ><img src="../../assets/images/bangvector.png" class="circle" alt="bengaluru" width="304" height="236" (click)="bagBtn(content)"></a>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a ><img src="../../assets/images/hyderabad-india-charminar-vector-drawn-sketch-illustration-hand-64018001.jpg" class="circle" alt="hyderabad" width="304" height="236" (click)="hydBtn(content)"></a>
+                <a style="cursor:pointer;" ><img src="../../assets/images/hyderabad-india-charminar-vector-drawn-sketch-illustration-hand-64018001.jpg" class="circle" alt="hyderabad" width="304" height="236" (click)="hydBtn(content)"></a>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a ><img src="../../assets/images/mumbaibw.png" class="circle" alt="mumbai" width="304" height="236" (click)="mumBtn(content)"></a>
+                <a style="cursor:pointer;" ><img src="../../assets/images/mumbaibw.png" class="circle" alt="mumbai" width="304" height="236" (click)="mumBtn(content)"></a>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a ><img src="../../assets/images/nagpur.jpg" class="circle" alt="nagpur" width="304" height="236" (click)="nagBtn(content)"></a>
+                <a style="cursor:pointer;" ><img src="../../assets/images/nagpur.jpg" class="circle" alt="nagpur" width="304" height="236" (click)="nagBtn(content)"></a>
               </div>
 
              <div class="whiteBorder"></div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a ><img src="../../assets/images/boston_cityscape_wall_decal_design_by_wall_decal_shop-d6808v0.jpg" class="circle" alt="boston" width="304" height="236" (click)="bosBtn(content)"></a>
+                <a style="cursor:pointer;" ><img src="../../assets/images/boston_cityscape_wall_decal_design_by_wall_decal_shop-d6808v0.jpg" class="circle" alt="boston" width="304" height="236" (click)="bosBtn(content)"></a>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a ><img src="../../assets/images/stock-vector-los-angeles-lettering-modern-text-and-skyline-city-vector-los-angeles-print-hand-drawn-font-for-604803965-2.jpg" class="circle" alt="losangeles" width="304" height="236" (click)="losBtn(content)"></a>
+                <a style="cursor:pointer;" ><img src="../../assets/images/stock-vector-los-angeles-lettering-modern-text-and-skyline-city-vector-los-angeles-print-hand-drawn-font-for-604803965-2.jpg" class="circle" alt="losangeles" width="304" height="236" (click)="losBtn(content)"></a>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a ><img src="../../assets/images/laslaslas.jpg" class="circle" alt="lasvegas" width="304" height="236" (click)="lasBtn(content)"></a>
+                <a style="cursor:pointer;" ><img src="../../assets/images/laslaslas.jpg" class="circle" alt="lasvegas" width="304" height="236" (click)="lasBtn(content)"></a>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a ><img src="../../assets/images/new-york-skyline-and-red-ribbon_23-2147493929_Fotor.jpg" class="circle" alt="nyc" width="304" height="236" (click)="nycBtn(content)"></a>
+                <a style="cursor:pointer;" ><img src="../../assets/images/new-york-skyline-and-red-ribbon_23-2147493929_Fotor.jpg" class="circle" alt="nyc" width="304" height="236" (click)="nycBtn(content)"></a>
               </div>
 
 
@@ -312,7 +312,7 @@
 
 
             <br>
-            <p style="color:#ffffff;margin-left: 15px"><i>What's in my city? &copy;</i><a (click)="abtUs(content)" >About Us | </a><a (click)="cntct(content)" >Contact Us | </a><a (click)="disc(content)" >Disclaimer | </a>
+            <p style="color:#ffffff;margin-left: 15px"><i>What's in my city? &copy;</i><a style="cursor:pointer;" style="cursor:pointer;" (click)="abtUs(content)" >About Us | </a><a style="cursor:pointer;" (click)="cntct(content)" >Contact Us | </a><a style="cursor:pointer;" (click)="disc(content)" >Disclaimer </a>
             <a class="headingrefForReview"> Write a Review</a></p>
 
           </div>

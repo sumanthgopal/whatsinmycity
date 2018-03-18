@@ -15,7 +15,6 @@ export class UserService {
     this.options = new RequestOptions({ headers: this.headers });
   }
   onSignup(details) {
-    console.log(details);
     this.checkLogout = false;
     return this._http.post('https://whatsinmycityphp-whatsinmycityphp.1d35.starter-us-east-1.openshiftapps.com/insert.php/', details, this.options)
       .map(() => '');
@@ -34,27 +33,27 @@ export class UserService {
   }
 
   selectData(values){
-    return this._http.post('https://whatsinmycityphp-whatsinmycityphp.1d35.starter-us-east-1.openshiftapps.com/selectRestaurants.php/', {'searchValue': 'RESTAURANT', 'city': values} , this.options)
+    return this._http.post('https://whatsinmycityphp-whatsinmycityphp.1d35.starter-us-east-1.openshiftapps.com/selectRestaurants.php/', {'searchValue': 'restaurant', 'city': values} , this.options)
         .map( res => res.json());
   }
 
   selectDataEvents(values){
-    return this._http.post('https://whatsinmycityphp-whatsinmycityphp.1d35.starter-us-east-1.openshiftapps.com/selectEvents.php/', {'searchValue': 'EVENTS', 'city': values} , this.options)
+    return this._http.post('https://whatsinmycityphp-whatsinmycityphp.1d35.starter-us-east-1.openshiftapps.com/selectEvents.php/', {'searchValue': 'events', 'city': values} , this.options)
       .map( res => res.json());
   }
 
   selectDataPlaceofInt(values){
-    return this._http.post('https://whatsinmycityphp-whatsinmycityphp.1d35.starter-us-east-1.openshiftapps.com/selectPlaceOfInt.php/', {'searchValue': 'PLACESOFINTEREST', 'city': values} , this.options)
+    return this._http.post('https://whatsinmycityphp-whatsinmycityphp.1d35.starter-us-east-1.openshiftapps.com/selectPlaceOfInt.php/', {'searchValue': 'placesofinterest', 'city': values} , this.options)
       .map( res => res.json());
   }
 
   selectDataNightLife(values){
-    return this._http.post('https://whatsinmycityphp-whatsinmycityphp.1d35.starter-us-east-1.openshiftapps.com/selectRestaurants.php/', {'searchValue': 'NIGHTLIFE', 'city': values} , this.options)
+    return this._http.post('https://whatsinmycityphp-whatsinmycityphp.1d35.starter-us-east-1.openshiftapps.com/selectRestaurants.php/', {'searchValue': 'nightlife', 'city': values} , this.options)
       .map( res => res.json());
   }
 
   selectDataShopping(values){
-    return this._http.post('https://whatsinmycityphp-whatsinmycityphp.1d35.starter-us-east-1.openshiftapps.com/selectRestaurants.php/', {'searchValue': 'SHOPPING', 'city': values} , this.options)
+    return this._http.post('https://whatsinmycityphp-whatsinmycityphp.1d35.starter-us-east-1.openshiftapps.com/selectRestaurants.php/', {'searchValue': 'shopping', 'city': values} , this.options)
       .map( res => res.json());
   }
 
@@ -69,14 +68,11 @@ export class UserService {
   }
 
   getSelectedUsers(values){
-    console.log(values);
     return this._http.post('https://whatsinmycityphp-whatsinmycityphp.1d35.starter-us-east-1.openshiftapps.com/insertwithdata.php/', {'mail': values} , this.options)
       .map( res => res.json());
   }
 
   updateReview(values,rating) {
-    console.log(values);
-    console.log(rating);
     return this._http.post('https://whatsinmycityphp-whatsinmycityphp.1d35.starter-us-east-1.openshiftapps.com/updatereview.php/',{'rev': values,'rat':rating} , this.options)
       .map(() => '');
   }

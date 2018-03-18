@@ -28,7 +28,7 @@ export class RestaurantsComponent implements OnInit {
       this.cityName = params["cityName"];
       this.emailUser = params["user"];
     });
-    console.log(this.emailUser);
+    
     this.userService
       .selectData(this.cityName)
       .subscribe(restaurants => {

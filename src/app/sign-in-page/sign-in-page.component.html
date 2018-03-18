@@ -17,7 +17,7 @@
 <body>
 <div class="container">
 
-    <img src="assets/images/logo.png" height="120" width="350" style="margin-top: 40px">
+    <a style="cursor:pointer" [routerLink]="['/home']"> <img src="assets/images/logo.png" height="120" width="350" style="margin-top: 40px"></a>
 
     <h2>Sign-in to you account</h2>
     <form (submit)="onLogin()">

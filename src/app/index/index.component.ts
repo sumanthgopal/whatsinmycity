@@ -26,7 +26,7 @@ export class IndexComponent implements OnInit {
     /*this.route.queryParams.subscribe(params => {
       this.emailUser = params["user"];
     });
-    console.log(this.emailUser);*/
+    */
   }
   citiesList = [ {
     'Name': 'Boston',
@@ -145,7 +145,7 @@ export class IndexComponent implements OnInit {
         }
       }
 
-      console.log(navigationExtras);
+      
       this.router.navigate(['/shopping'], navigationExtras);
     }
   }
